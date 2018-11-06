@@ -1,0 +1,19 @@
+<h3 style="color:green">Customer List:</h3>
+
+  <a *ngFor="let cust of customers"  [routerLink]="['/detail', cust.id]"  class="col-1-4">
+    <div>
+      <h4>{{cust.id}} - {{cust.firstname}}
+      </h4>
+    </div>
+  </a>
+
+
+
+  <table>
+    <tr *ngFor="let cust of customers"><td >{{cust.id}} - {{cust.firstname}}</td>&nbsp;<td> <button a [routerLink]="['/detail', cust.id]"  class="col-1-4">edit</button></td></tr>
+    </table>
+<br>
+<h3 style="color:green">Feature Details:</h3>
+    <table>
+        <tr *ngFor="let ff of features"><td >{{ff.fid}} - {{ff.featureName}} - {{ff.application}} - {{ff.description}}</td>&nbsp;<td> <button a [routerLink]="['/feature', ff.fid]"  class="col-1-4">edit</button>	</td></tr>
+        </table>
